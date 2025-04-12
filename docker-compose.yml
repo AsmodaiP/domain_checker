@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  domain_checker:
+    image: 565463636346/domain_checker:latest
+    container_name: domain_checker
+    env_file:
+      - .env
+    restart: always
