@@ -13,6 +13,8 @@ CHAT_ID = os.getenv("CHAT_ID", "ВАШ_CHAT_ID")
 # Список доменов для проверки
 DOMAINS = os.getenv("DOMAINS", "").split(",")
 
+# Параметры проверки
+CHECK_INTERVAL = int(os.getenv("CHECK_INTERVAL", 60))
 
 def send_telegram_message(message):
     """
@@ -55,8 +57,7 @@ def main():
     while True:
         for domain in DOMAINS:
             check_domain(domain)
-        # Проверять каждые 5 минут (300 секунд)
-        time.sleep(300)
+        time.sleep(CHECK_INTERVAL)
 
 
 if __name__ == "__main__":
