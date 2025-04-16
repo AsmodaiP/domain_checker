@@ -6,6 +6,10 @@ import os
 # Загрузка переменных из .env
 load_dotenv()
 
+
+
+
+
 # Конфигурация Telegram бота
 BOT_TOKEN = os.getenv("BOT_TOKEN", "ВАШ_TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID", "ВАШ_CHAT_ID")
